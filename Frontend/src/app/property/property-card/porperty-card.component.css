@@ -1,4 +1,10 @@
 
-h1 {
-    color:red;
+/* 
+.card-body {
+    background-image: url("assets/images/house_icon.png");
+} */
+
+.propImg {
+    width: 100%;
+    height: 250px;
 }
