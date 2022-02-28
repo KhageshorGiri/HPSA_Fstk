@@ -1,10 +1,24 @@
-<div class="card shadow-lg content-right" style="width: 18rem;">
-    <img class="card-img-top p-1" style="height:250px;" src="assets/images/house_default.png">
+
+
+
+<div class="card shadow-lg " style="width: 18rem;">
+    <div class="card-image-wraper">
+        <img class="card-img-top" style="height:250px;" src="assets/images/house_default.png">
+
+        <ul class="list-inline card-button-icons animate">
+            <li class="list-inline-item">
+                <button class="btn btn-sm btn-info"><i class="fa-regular fa-pen-to-square"></i> Edit</button>
+            </li>
+            <li class="list-inline-item">
+                <button class="btn btn-sm btn-primary"><i class="fa-solid fa-file-contract"></i> Contact</button>
+            </li>
+        </ul>
+    </div>
    
-    <div class="card-body">                                
+    <div class="card-body">  
+                            
         <h6>{{property.Name}}</h6>
         <h6>{{property.Type}}</h6>
-        <h6>{{property.Price}}</h6>
-       
+        <h6>{{property.Price}}</h6>     
     </div>
 </div>
