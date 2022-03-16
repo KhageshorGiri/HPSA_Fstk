@@ -4,6 +4,6 @@ export interface IProperty{
     Name : string,
     Type: string,
     Price: number,
-    // isSell: number,
-    // Image: string
+    isSell: number,
+    Image?: string
 }

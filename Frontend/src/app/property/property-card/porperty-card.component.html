@@ -3,8 +3,8 @@
 
 <div class="card shadow-lg " style="width: 18rem;">
     <div class="card-image-wraper">
-        <img class="card-img-top" style="height:250px;" src="assets/images/house_default.png">
-
+        <img *ngIf="property.Image" class="card-img-top" style="height:250px;" src="assets/images/{{property.Image}}">
+        <img *ngIf="!property.Image" class="card-img-top" style="height:250px;" src="assets/images/house_default.png">
         <ul class="list-inline card-button-icons animate">
             <li class="list-inline-item">
                 <button class="btn btn-sm btn-info" routerLink="/property-details/{{property.Id}}"><i class="fa-regular fa-pen-to-square"></i> Details</button>

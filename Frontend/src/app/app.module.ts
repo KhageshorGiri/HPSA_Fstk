@@ -14,12 +14,21 @@ import {Routes, RouterModule} from '@angular/router';
 import { PropertDetailsComponent } from './property/propert-details/propert-details.component';
 import { PropertyNotFoundComponent } from './property/property-not-found/property-not-found.component';
 
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { UserRegisterComponent } from './User/user-register/user-register.component';
+import { UserLoginComponent } from './User/user-login/user-login.component'
+
+import { TabsModule } from 'ngx-bootstrap/tabs';
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
+
 const appRoutes : Routes = [
   {path: '', component: PropertyListComponent},
   {path: 'add-property', component: AddPropertyComponent},
   {path: 'property-list', component: PropertyListComponent},
-  {path: 'rent-property', component: AddPropertyComponent},
+  {path: 'rent-property', component: PropertyListComponent},
   {path: 'property-details/:id', component: PropertDetailsComponent},
+  {path: 'user/register', component: UserRegisterComponent},
+  {path: 'user/login', component: UserLoginComponent},
   {path: '**', component: PropertyNotFoundComponent}
 ]
 
@@ -31,13 +40,19 @@ const appRoutes : Routes = [
     NavBarComponent,
     AddPropertyComponent,
     PropertDetailsComponent,
-    PropertyNotFoundComponent
+    PropertyNotFoundComponent,
+    UserRegisterComponent,
+    UserLoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot(appRoutes),
+    TabsModule.forRoot(),
+    ButtonsModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

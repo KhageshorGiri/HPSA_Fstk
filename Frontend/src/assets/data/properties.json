@@ -4,36 +4,48 @@
       "Id":1,
       "Name": "The Fold house",
       "Type": "Place",
-      "Price": 12350
+      "Price": 12350,
+      "isSell": 1,
+      "Image": "prop-1.png"
     },
     {
       "Id":2,
       "Name": "The Gold house",
       "Type": "House",
-      "Price": 15650
+      "Price": 15650,
+      "isSell": 1,
+      "Image": "prop-2.png"
     },
     {
       "Id":3,
       "Name": "The Dimond house",
       "Type": "Place",
-      "Price": 67800
+      "Price": 67800,
+      "isSell": 1,
+      "Image": "prop-3.png"
     },
     {
       "Id":4,
       "Name": "The Opera house",
       "Type": "Resident",
-      "Price": 14350
+      "Price": 14350,
+      "isSell": 0,
+      "Image": "prop-4.png"
     },
     {
       "Id":5,
       "Name": "The Rocking Place",
       "Type": "Place",
-      "Price": 133550
+      "Price": 133550,
+      "isSell": 1,
+      "Image": "prop-5.png"
     },
     {
       "Id":6,
       "Name": "Red house",
       "Type": "Place",
-      "Price": 188350
+      "Price": 188350,
+      "isSell": 0
+      
     }
   ]

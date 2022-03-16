@@ -11,12 +11,12 @@ export class HousingService {
 
   constructor(private http: HttpClient) { }
 
-  getAllProperties(){
+  getAllProperties(sellFlag: number){
      return this.http.get('assets/data/properties.json').pipe(
       map(data => {
         const propertiesArray: Array<IProperty> = [];
         for(const Id in data){
-          if(data.hasOwnProperty(Id)){           
+          if(data.hasOwnProperty(Id) && data[Id].isSell == sellFlag){           
             propertiesArray.push(data[Id]);
           }
         }

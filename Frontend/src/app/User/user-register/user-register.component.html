@@ -1,0 +1,50 @@
+
+<div>
+    <div class="row">
+        <div class="col-md-6 m-auto">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Register</h5>
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" formControlName="userName" class="form-control">
+                            <span *ngIf="userName.invalid && userName.touched" class="text-danger" >
+                                Please Provide Username
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" formControlName="email" class="form-control">
+                            <span *ngIf="email.invalid && email.touched" class="text-danger" >
+                                Please Provide valid email.
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="Password" formControlName="password" class="form-control">
+                            <span *ngIf="password.invalid && password.touched">
+                                please provide password
+                            </span>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Conform Password</label>
+                            <input type="Password" formControlName="confirmPassword" class="form-control">
+                            <small *ngIf="!conformPassword.valid && conformPassword.touched" class="text-danger">Invalid</small>
+                            <small *ngIf="registerForm.hasError['notmatched'] && conformPassword.valid" class="text-danger">Password not matched</small>
+                           
+                        </div>
+                        <div class="form-group">
+                           <button type="submit" class="btn btn-info mr-2">Register</button>
+                           <button type="reset" class="btn btn-secondary">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
